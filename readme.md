@@ -1,6 +1,6 @@
 # 📧 CE Summarization Prototype
 
-A working prototype that summarizes **multi-threaded Customer Experience (CE) emails** using NLP, provides a **human-in-the-loop approval workflow**, and suggests **next best actions** for associates.  
+A working prototype that summarizes **multi-threaded Customer Experience emails** using NLP, provides a **approval workflow**, and suggests **next best actions** for associates.  
 It also includes **impact analysis (time, cost, CSAT)** to show measurable business outcomes.
 
 ---
@@ -23,12 +23,13 @@ It also includes **impact analysis (time, cost, CSAT)** to show measurable busin
 - **[Streamlit](https://streamlit.io/)** — simple, browser-based UI for prototypes.  
 - **[OpenAI GPT (gpt-4o-mini)](https://platform.openai.com/)** — summarization & action generation.  
 - **[pandas](https://pandas.pydata.org/)** — data wrangling.  
-- **[Altair](https://altair-viz.github.io/)** — charts for impact analysis.  
-- **[TextBlob](https://textblob.readthedocs.io/)** *(optional)* — for sentiment analysis if extended.  
+- **[Altair](https://altair-viz.github.io/)** — charts for impact analysis.   
 
 ---
 
 ## 📂 Project Structure
+
+```text
 ce_summarization/
  ├── app.py                # Streamlit app orchestrator
  ├── data_utils.py         # Load & preprocess CE threads
@@ -36,7 +37,8 @@ ce_summarization/
  ├── workflow_manager.py   # Approvals, CSV persistence
  ├── impact_metrics.py     # Time/cost/CSAT impact analysis
  ├── requirements.txt      # Python dependencies
- └── ce_exercise_threads UPDATED.txt  # Provided dataset
+ └── ce_exercise_threads UPDATED.txt  # Provided dataset 
+ ```
 
 ---
 
@@ -55,4 +57,11 @@ venv\Scripts\activate      # Windows
 
 pip install -r requirements.txt
 
+# Mac/Linux
+export OPENAI_API_KEY="your_api_key_here"
+
+# Windows PowerShell
+setx OPENAI_API_KEY "your_api_key_here"
+
 streamlit run app.py
+```
