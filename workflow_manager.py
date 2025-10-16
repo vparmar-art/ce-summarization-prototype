@@ -23,3 +23,8 @@ def load_approved():
             "thread_id", "topic", "product", "approved_summary", "suggested_actions"
         ])
     return pd.read_csv(CSV_PATH)
+
+def delete_all_approved():
+    """Delete all approved summaries (reset CSV)."""
+    if os.path.exists(CSV_PATH):
+        os.remove(CSV_PATH)
